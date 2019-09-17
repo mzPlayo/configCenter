@@ -1,0 +1,53 @@
+#server:
+#  port: 8764  # sys-server服务器端口号
+#
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/
+#
+#feign:
+#  hystrix:
+#    enabled: true
+#
+#mybatis:
+#    type-aliases-package: com.ssist
+#    mapper-locations: classpath:mapper/**/*.xml
+#    config-location: classpath:mybatis-config.xml
+#
+#spring:
+#    datasource:
+#        url: jdbc:mysql://192.168.1.13:3313/comprehensive?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&serverTimezone=UTC
+#        username: hfrzmysql
+#        password: 123456
+#        driver-class-name: com.mysql.cj.jdbc.Driver
+#        type: com.alibaba.druid.pool.DruidDataSource
+#        initialSize: 5
+#        minIdle: 5
+#        maxActive: 20
+#        maxWait: 60000
+#        timeBetweenEvictionRunsMillis: 60000
+#        minEvictableIdleTimeMillis: 300000
+#        validationQuery: SELECT 1 FROM DUAL
+#        testWhileIdle: true
+#        testOnBorrow: false
+#        testOnReturn: false
+#        poolPreparedStatements: true
+#        maxPoolPreparedStatementPerConnectionSize: 20
+#        filters: stat,wall,log4j
+#        connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=15000
+#        useGlobalDataSourceStat: true
+#    sleuth:
+#      messaging:
+#        rabbit:
+#          enabled: true
+#      sampler:
+#        probability: 1.0 # 将采样比例设置为 1.0，也就是全部都需要。默认是 0.1
+#    zipkin:
+#      sender:
+#        type: rabbit
+#    rabbitmq:
+#        host: 192.168.1.10
+#        port: 5672
+#        username: ssist
+#        password: ssist
